@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:src="@drawable/thumbnail"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/profileChannel"
+            />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profileChannel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thumbnail"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/profile2"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                tools:ignore="NotSibling"
+                android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:maxLines="2"
+            android:text="Vlog41 : Mja hi aa gya aaj toh coding continue continue m aur bhi continue h"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profileChannel"
+            app:layout_constraintTop_toBottomOf="@+id/thumbnail" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/channelName"
+                android:text="My Channel"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/gray"
+                app:layout_constraintStart_toEndOf="@+id/profileChannel"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/views"
+                app:layout_constraintStart_toEndOf="@+id/channelName"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                android:text="236K Views"
+                android:textColor="@color/gray"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
